@@ -34,13 +34,13 @@ function App() {
         </div>
         <div className="col-8 mainDiv">
           <form onSubmit={handleSubmit} className="mt-3">
-            <input type="text" name="username" required className="searchBox" placeholder="Enter a username to check if they are a mutual friend" 
+            <input type="text" name="username" required className="searchBox" placeholder="Enter a username to check if you have mutual connections / friends." 
               value={username} onChange={e=> setUsername(e.target.value)}/>
             <button type="submit" className="searchBtn">Search</button>
           </form>
-          <h5 style={{margin:18}}>{searchResult}</h5>
+          <h4 style={{margin:18}}>{searchResult}</h4>
           <div className="userRecommendation">
-            <p style={{fontSize:20}}>Sagar's Friend Recommendations</p>
+            <p style={{fontSize:20,color:'rgb(230, 230, 230)'}}>Sagar's Friend Recommendations</p>
             <div className="row">
               {userRecommendation.map(username =>{
                 let imagePath = `/Images/${username}.png`;
