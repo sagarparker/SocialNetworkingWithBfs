@@ -34,7 +34,7 @@ function App() {
         </div>
         <div className="col-8 mainDiv">
           <form onSubmit={handleSubmit} className="mt-3">
-            <input type="text" name="username" required className="searchBox" placeholder="Enter a username to check if you have mutual connections / friends." 
+            <input type="text" name="username" required className="searchBox" placeholder="Enter a username to check if you have a mutual connection." 
               value={username} onChange={e=> setUsername(e.target.value)}/>
             <button type="submit" className="searchBtn">Search</button>
           </form>

@@ -6,7 +6,8 @@
 	  /     \      /     \
 	Jim    Pam   Angela	  Kevin
 	/        \
-   Michael    Dwight
+   Michael   Dwight
+
 */
 
 // javascript object representation of the above tree
@@ -88,7 +89,7 @@ export let SearchForMutualFriends = (tree, username, searchUser) => {
 
 		// if currentNode is the node we're searching for, break & alert
 		if (currentNode.value === searchUser && !usersFriend.hasOwnProperty(currentNode.value)) {
-			return `${searchUser} and ${username.value} have mutual friends.\n`;
+			return `${searchUser} and ${username.value} have a mutual connection.\n`;
 		}
 
 		// if currentNode has a left child node, add it to the queue.
@@ -104,7 +105,7 @@ export let SearchForMutualFriends = (tree, username, searchUser) => {
 		// remove the currentNode from the queue.
 		queue.shift();
 	}
-	return `${searchUser} and ${username.value} don't have any mutual friends.\n`;
+	return `${searchUser} and ${username.value} don't have any mutual connections.\n`;
 };
 
 
