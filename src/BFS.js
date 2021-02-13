@@ -77,11 +77,13 @@ export let SearchForMutualFriends = (tree, username, searchUser) => {
 
 	// make a queue array
 	let queue = [];
+	
 	// populate it with the node that will be the root of your search
 	queue.push(username);
 
 	// search the queue until it is empty
 	while (queue.length > 0) {
+
 		// assign the top of the queue to variable currentNode
 		let currentNode = queue[0];
 
@@ -102,12 +104,15 @@ export let SearchForMutualFriends = (tree, username, searchUser) => {
 			queue.push(tree[currentNode.right]);
         }
         
+		
 		// remove the currentNode from the queue.
 		queue.shift();
 	}
 	return `${searchUser} and ${username.value} don't have any mutual connections.\n`;
 };
 
+
+//Recommednation system
 
 export let userRecommendations = (tree, username) => {
 	// make a queue array
@@ -121,6 +126,8 @@ export let userRecommendations = (tree, username) => {
 
 		// assign the top of the queue to variable currentNode
 		let currentNode = queue[0];
+
+
 
 		//Checking for users own username and user friends
 		if(currentNode.value !== username.value && !usersFriend.hasOwnProperty(currentNode.value)){
@@ -137,6 +144,7 @@ export let userRecommendations = (tree, username) => {
 			queue.push(tree[currentNode.right]);
         }
         
+		
 		// remove the currentNode from the queue.
 		queue.shift();
 	}

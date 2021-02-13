@@ -31,6 +31,7 @@ function App() {
         <div className="col-4 myInfoHolder">
           <img src="/Images/Sagar.png" alt="Sagar.png" className="profileImage" />
           <p className="mt-3 profileName">Sagar Parker</p>
+          <img src="/Images/Friends.png" alt="Friends.png" />
         </div>
         <div className="col-8 mainDiv">
           <form onSubmit={handleSubmit} className="mt-3">
